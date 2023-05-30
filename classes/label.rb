@@ -1,0 +1,31 @@
+require_relative 'item'
+
+class Label
+    attr_accessor :title, :color
+    attr_reader :id, :items
+
+    def initialize(title, color)
+        @id = Random.rand(1..1_000_000)
+        @title = title
+        @color = color
+        @items = []
+    end
+
+    # Method add an item to a label and associate the label with that item.
+    def add_item(item)
+        @items.push(item)
+        item.label = self
+    end
+
+    def to_hash
+        {
+          id: @id,
+          title: title,
+          color: color
+        }
+      end
+end
+
+label = Label.new('The Promise', 'Cream')
+label.add_item(Item.new('2020-12-12'))
+puts label.to_hash
