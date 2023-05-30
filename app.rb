@@ -1,9 +1,12 @@
-require_relative "models/book_mod"
-require_relative "models/musical_album_mod"
-require_relative "models/games_mod"
+# frozen_string_literal: true
 
-class App 
-  def initialize 
+require_relative 'models/book_mod'
+require_relative 'models/musical_album_mod'
+require_relative 'models/games_mod'
+
+# This class execute the main logic
+class App
+  def initialize
     @book = []
     @musical_album = []
     @games = []

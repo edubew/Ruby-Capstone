@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 module GamesMod
-    def display_games 
-        puts "Display games"
-    end
+  def add_game 
+    
+  end
 end
