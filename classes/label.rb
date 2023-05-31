@@ -17,6 +17,14 @@ class Label
     @items.push(item)
     item.label = self
   end
+
+  def to_hash
+    {
+      id: @id,
+      title: title,
+      color: color
+    }
+  end
 end
 
 label = Label.new('The Promise', 'Cream')
