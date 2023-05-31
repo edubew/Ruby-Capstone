@@ -18,3 +18,5 @@ class MusicAlbum < Item
     super && @on_spotify
   end
 end
+
+music1 = MusicAlbum.new

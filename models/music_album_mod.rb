@@ -11,6 +11,7 @@ module MusicAlbumMod
     music_album = MusicAlbum.new(on_spotify, publish_data)
     @music_albums << music_album
     puts 'Successfully added musical album'
+    SaveData.new.save_music_album(@music_albums)
   end
 
   def display_music_album
