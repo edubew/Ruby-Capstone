@@ -12,5 +12,5 @@ class App
     @games = []
   end
 
-include BookMod
+  include BookMod
 end

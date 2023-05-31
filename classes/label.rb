@@ -12,8 +12,8 @@ class Label
     @items = []
   end
 
-   # Method to add an item to a label and associate the label with that item.
-   def add_item(item)
+  # Method to add an item to a label and associate the label with that item.
+  def add_item(item)
     @items.push(item)
     item.label = self
   end
