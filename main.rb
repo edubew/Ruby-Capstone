@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require_relative 'app'
 
 # Represents the basic input to the functions

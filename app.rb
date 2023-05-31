@@ -12,5 +12,13 @@ class App
     @games = []
   end
 
+  # Display all available books
+  def display_books
+    return unless @books.empty?
+    puts 'No books available yet. Please add a book !!!'
+    @books.each do |book|
+      puts "Publisher: #{book.publisher}, Cover State: #{book.cover_state}, Publish Date: #{book.publish_date}, Name: #{book.name}"
+    end
+  end
   include BookMod
 end
