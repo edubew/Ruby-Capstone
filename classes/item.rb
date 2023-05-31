@@ -1,7 +1,6 @@
-# frozen_string_literal: true
-
 require 'date'
 
+# Item class and defines the attributes of an item
 class Item
   attr_accessor :publish_date, :author, :label, :genre, :archived
 
@@ -18,7 +17,14 @@ class Item
 
   private
 
+  # def can_be_archived?
+  #   ((Date.today - Date.parse(@publish_date)).to_i / 365) > 10
+  # end
+
   def can_be_archived?
-    ((Date.today - Date.parse(@publish_date)).to_i / 365) > 10
+    @publish_date = Date.parse(@publish_date) unless @publish_date.is_a?(Date)
+    today = Date.today
+    ten_years_ago = (today - (10 * 365))
+    @publish_date < ten_years_ago
   end
 end

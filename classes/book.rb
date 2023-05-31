@@ -1,32 +1,22 @@
-# frozen_string_literal: true
-
+require_relative 'item'
 require 'date'
 
 # Book class that inherits from Item class and defines the attributes of a book
-class Item
-  attr_accessor :publish_date, :author, :label, :genre, :archived
+class Book < Item
+  attr_accessor :publisher, :cover_state, :name, :id
 
-  def initialize(publish_date)
-    Random.rand(1..1_000_000)
-    @publish_date = publish_date
-    @archived = false
+  def initialize(publisher, cover_state, publish_date, name)
+    super(publish_date)
+    @publisher = publisher
+    @cover_state = cover_state
+    @name = name
+    @id = Random.rand(1..1000)
   end
-
-  def move_to_archive?
-    @archived = true if can_be_archived?
-    @archived
-  end
-
-  private
-
-  # def can_be_archived?
-  #   ((Date.today - Date.parse(@publish_date)).to_i / 365) > 10
-  # end
 
   def can_be_archived?
-    @publish_date = Date.parse(@publish_date) unless @publish_date.is_a?(Date)
-    today = Date.today
-    ten_years_ago = (today - (10 * 365))
-    @publish_date < ten_years_ago
+    super && @cover_state == 'bad'
   end
 end
+
+# book = Book.new('The Promise', 'good', Date.parse('2020-12-12'), 'book')
+# puts book.can_be_archived?
