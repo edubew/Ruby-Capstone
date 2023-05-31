@@ -11,7 +11,7 @@ class Main
     puts '2. Display all musical album'
     puts '3. Display all games'
     puts '4. Add books'
-    puts '5. Add musical album'
+    puts '5. Add music album'
     puts '6. Add games'
     puts '7. Exist'
   end
@@ -28,7 +28,7 @@ class Main
     when '4'
       app.add_book
     when '5'
-      app.add_musical_album
+      app.add_music_album
     when '6'
       app.add_game
     end
