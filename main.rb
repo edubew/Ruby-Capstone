@@ -6,33 +6,53 @@ require_relative 'app'
 class Main
   def select_options
     puts 'Welcome to Catalog of my things !!!'
-    puts 'Kindly choose an option to interract with'
-    puts '1. Display all books'
-    puts '2. Display all musical album'
-    puts '3. Display all games'
-    puts '4. Add books'
-    puts '5. Add musical album'
-    puts '6. Add games'
-    puts '7. Exist'
+    puts 'Kindly choose an option to interact with'
+    puts '1.  Display all books'
+    puts '2.  Display all labels'
+    puts '3.  Display all musical albums'
+    puts '4.  Display all genres'
+    puts '5.  Display all games'
+    puts '6.  Display all authors'
+    puts '7.  Add books'
+    puts '8.  Add label'
+    puts '9.  Add musical album'
+    puts '10. Add genre'
+    puts '11. Add games'
+    puts '12. Add author'
+    puts 'Enter zero(0) to exit'
   end
 
+  # rubocop:disable Metrics/MethodLength
   def options(option)
     app = App.new
     case option
     when '1'
       app.display_books
     when '2'
-      app.display_musical_album
+      app.display_labels
     when '3'
-      app.display_games
+      app.display_musical_album
     when '4'
-      app.add_book
+      app.display_genre
     when '5'
-      app.add_musical_album
+      app.display_games
     when '6'
+      app.display_authors
+    when '7'
+      app.add_book
+    when '8'
+      app.add_label
+    when '9'
+      app.add_musical_album
+    when '10'
+      app.add_genre
+    when '11'
       app.add_game
+    when '12'
+      app.add_author
     end
   end
+  # rubocop:enable Metrics/MethodLength
 
   def execute_app
     loop do
@@ -42,7 +62,7 @@ class Main
 
       options(option)
 
-      break if option == '7'
+      break if option == '0'
     end
   end
 end
@@ -53,3 +73,4 @@ def execute_main
 end
 
 execute_main
+
