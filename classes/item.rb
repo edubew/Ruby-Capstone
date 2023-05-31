@@ -2,11 +2,12 @@
 
 require 'date'
 
+# Book class that inherits from Item class and defines the attributes of a book
 class Item
   attr_accessor :publish_date, :author, :label, :genre, :archived
 
   def initialize(publish_date)
-    id = Random.rand(1..1_000_000)
+    Random.rand(1..1_000_000)
     @publish_date = publish_date
     @archived = false
   end
@@ -21,7 +22,7 @@ class Item
   # def can_be_archived?
   #   ((Date.today - Date.parse(@publish_date)).to_i / 365) > 10
   # end
-  
+
   def can_be_archived?
     @publish_date = Date.parse(@publish_date) unless @publish_date.is_a?(Date)
     today = Date.today

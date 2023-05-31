@@ -16,6 +16,7 @@ class Main
     puts '7. Exist'
   end
 
+  # rubocop:disable Metrics/MethodLength
   def options(option)
     app = App.new
     case option
@@ -34,6 +35,7 @@ class Main
     end
   end
 
+  # rubocop:enable Metrics/MethodLength
   def execute_app
     loop do
       select_options
