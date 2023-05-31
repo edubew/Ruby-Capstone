@@ -18,7 +18,7 @@ class Main
     app = App.new
     case option
     when '1'
-      app.display_books
+      app.list_books
     when '2'
       app.display_musical_album
     when '3'
