@@ -4,21 +4,18 @@ require_relative 'classes/book'
 
 # This class execute the main logic
 class App
+  include BookMod
   attr_accessor :books, :musical_album, :games
 
   def initialize
-    @books = []
     @musical_album = []
     @games = []
+    @book_file = 'data/books.json'
+    @books = if File.exist?(@book_file)
+               file_contents = File.read(@book_file)
+               file_contents.empty? ? [] : JSON.parse(file_contents)
+             else
+               []
+             end
   end
-
-  # Display all available books
-  def display_books
-    return unless @books.empty?
-    puts 'No books available yet. Please add a book !!!'
-    @books.each do |book|
-      puts "Publisher: #{book.publisher}, Cover State: #{book.cover_state}, Publish Date: #{book.publish_date}, Name: #{book.name}"
-    end
-  end
-  include BookMod
 end
