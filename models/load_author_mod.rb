@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Load method for reading authors details from the json file.
 module LoadAuthor
   def load_author

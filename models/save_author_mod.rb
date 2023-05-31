@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # module for saving authors details to json file.
 module SaveAuthor
   def save_author(authors)

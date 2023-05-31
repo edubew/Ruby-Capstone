@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # a module for reading authors details from class
 module LoadGame
   def load_game

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Module for game logic
 module GamesMod
   def display_games

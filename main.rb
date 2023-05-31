@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'app'
 
 # Represents the basic input to the functions
@@ -8,51 +6,46 @@ class Main
     puts 'Welcome to Catalog of my things !!!'
     puts 'Kindly choose an option to interact with'
     puts '1.  Display all books'
-    puts '2.  Display all labels'
-    puts '3.  Display all musical albums'
-    puts '4.  Display all genres'
-    puts '5.  Display all games'
-    puts '6.  Display all authors'
-    puts '7.  Add books'
-    puts '8.  Add label'
-    puts '9.  Add musical album'
-    puts '10. Add genre'
-    puts '11. Add games'
-    puts '12. Add author'
+    puts '2.  Display all musical albums'
+    puts '3.  Display all genres'
+    puts '4.  Display all games'
+    puts '5.  Display all authors'
+    puts '6.  Add books'
+    puts '7.  Add label'
+    puts '8.  Add musical album'
+    puts '9. Add genre'
+    puts '10. Add games'
+    puts '11. Add author'
     puts 'Enter zero(0) to exit'
   end
 
-  # rubocop:disable Metrics/MethodLength
   def options(option)
     app = App.new
     case option
     when '1'
-      app.display_books
+      app.list_books
     when '2'
-      app.display_labels
-    when '3'
       app.display_musical_album
-    when '4'
+    when '3'
       app.display_genre
-    when '5'
+    when '4'
       app.display_games
-    when '6'
+    when '5'
       app.display_authors
-    when '7'
+    when '6'
       app.add_book
-    when '8'
+    when '7'
       app.add_label
-    when '9'
+    when '8'
       app.add_musical_album
-    when '10'
+    when '9'
       app.add_genre
-    when '11'
+    when '10'
       app.add_game
-    when '12'
+    when '11'
       app.add_author
     end
   end
-  # rubocop:enable Metrics/MethodLength
 
   def execute_app
     loop do
@@ -73,4 +66,3 @@ def execute_main
 end
 
 execute_main
-
