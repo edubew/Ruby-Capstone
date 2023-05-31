@@ -18,5 +18,5 @@ class Book < Item
   end
 end
 
-book = Book.new('The Promise', 'good', Date.parse('2020-12-12'), 'book')
-puts book.can_be_archived?
+# book = Book.new('The Promise', 'good', Date.parse('2020-12-12'), 'book')
+# puts book.can_be_archived?
