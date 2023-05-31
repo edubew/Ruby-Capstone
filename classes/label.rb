@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'item'
 
 # Label class that is asscoiated with a item

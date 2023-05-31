@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'date'
 
 # Book class that inherits from Item class and defines the attributes of a book
