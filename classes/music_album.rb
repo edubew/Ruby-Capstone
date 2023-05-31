@@ -15,7 +15,6 @@ class MusicAlbum < Item
   private
 
   def can_be_archived?
-    publish_datetime = DateTime.parse(@publish_date)
-    ((Date.today - publish_datetime).to_i / 365) > 10
+    super && @on_spotify
   end
 end
