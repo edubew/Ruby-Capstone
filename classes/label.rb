@@ -11,3 +11,14 @@ class Label
     @color = color
     @items = []
   end
+
+   # Method to add an item to a label and associate the label with that item.
+   def add_item(item)
+    @items.push(item)
+    item.label = self
+  end
+end
+
+label = Label.new('The Promise', 'Cream')
+label.add_item(Item.new('2020-12-12'))
+puts label.to_hash
