@@ -19,8 +19,8 @@ describe Game do
     expect(last_played_at).to eq '2023-01-01'
   end
 
-  it 'should set the published date provided ' do 
-    publish_date = @game.publish_date 
+  it 'should set the published date provided ' do
+    publish_date = @game.publish_date
     expect(publish_date).to eq '2000-01-01'
-  end 
+  end
 end

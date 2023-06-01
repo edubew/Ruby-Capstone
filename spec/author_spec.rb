@@ -13,9 +13,8 @@ describe Author do
     expect(first_name).to eq 'Shafiu'
   end
 
-  it 'should set last name to the value provided' do 
-    last_name = @author.last_name 
-    expect(last_name).to eq 'Yushawu' 
+  it 'should set last name to the value provided' do
+    last_name = @author.last_name
+    expect(last_name).to eq 'Yushawu'
   end
 end
-
