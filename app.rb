@@ -13,7 +13,7 @@ class App
   attr_accessor :books, :music_albums, :games
 
   def initialize
-    @books = []
+    @books = LoadData.new.load_game
     @music_albums = []
     @games = []
   end
