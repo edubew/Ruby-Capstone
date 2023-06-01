@@ -4,14 +4,19 @@ require_relative 'app'
 class Main
   def select_options
     puts 'Welcome to Catalog of my things !!!'
-    puts 'Kindly choose an option to interract with'
-    puts '1. Display all books'
-    puts '2. Display all musical album'
-    puts '3. Display all games'
-    puts '4. Add books'
-    puts '5. Add musical album'
-    puts '6. Add games'
-    puts '7. Exist'
+    puts 'Kindly choose an option to interact with'
+    puts '1.  Display all books'
+    puts '2.  Display all musical albums'
+    puts '3.  Display all genres'
+    puts '4.  Display all games'
+    puts '5.  Display all authors'
+    puts '6.  Add books'
+    puts '7.  Add label'
+    puts '8.  Add musical album'
+    puts '9. Add genre'
+    puts '10. Add games'
+    puts '11. Add author'
+    puts 'Enter zero(0) to exit'
   end
 
   def options(option)
@@ -22,13 +27,23 @@ class Main
     when '2'
       app.display_musical_album
     when '3'
-      app.display_games
+      app.display_genre
     when '4'
-      app.add_book
+      app.display_games
     when '5'
-      app.add_musical_album
+      app.display_authors
     when '6'
+      app.add_book
+    when '7'
+      app.add_label
+    when '8'
+      app.add_musical_album
+    when '9'
+      app.add_genre
+    when '10'
       app.add_game
+    when '11'
+      app.add_author
     end
   end
 
@@ -40,7 +55,7 @@ class Main
 
       options(option)
 
-      break if option == '7'
+      break if option == '0'
     end
   end
 end
