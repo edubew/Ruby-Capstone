@@ -5,7 +5,9 @@ require_relative 'app'
 # Represents the basic input to the functions
 
 class Main
+
   def select_options
+
     puts 'Welcome to Catalog of my things !!!'
 
     puts 'Kindly choose an option to interact with'
@@ -31,9 +33,13 @@ class Main
     puts '10. Add game'
 
     puts '11. Add author'
+
   end
 
+
+
   def options(option)
+
     app = App.new
 
     case option
@@ -83,10 +89,15 @@ class Main
       app.add_author
 
     end
+
   end
 
+
+
   def execute_app
+
     loop do
+
       select_options
 
 
@@ -100,16 +111,24 @@ class Main
 
 
       break if option == '0'
+
     end
+
   end
+
 end
 
+
+
 def execute_main
+
   main = Main.new
 
   main.execute_app
+
 end
 
 
 
 execute_main
+
