@@ -1,6 +1,7 @@
 require_relative 'app'
 
 # Represents the basic input to the functions
+
 class Main
   def select_options
     puts 'Welcome to Catalog of my things !!!'
