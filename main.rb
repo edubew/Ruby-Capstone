@@ -15,7 +15,6 @@ class Main
     puts '8. Add musical album'
     puts '9. Add games'
     puts '10. Exit'
-
   end
 
   def options(option)
