@@ -9,9 +9,10 @@ class Main
     puts '2. Display all musical album'
     puts '3. Display all games'
     puts '4. Add books'
-    puts '5. Add musical album'
-    puts '6. Add games'
-    puts '7. Exist'
+    puts '5. Add labels'
+    puts '6. Add musical album'
+    puts '7. Add games'
+    puts '8. Exit'
   end
 
   def options(option)
