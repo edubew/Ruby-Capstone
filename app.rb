@@ -26,7 +26,7 @@ class App
     @music_albums = LoadData.new.load_music_album
     @games = LoadData.new.load_game
     @authors = LoadData.new.load_author
-    @genres = []
+    @genres = LoadData.new.load_genre
     @book_file = 'data/books.json'
     @books = if File.exist?(@book_file)
                file_contents = File.read(@book_file)
