@@ -19,12 +19,12 @@ class Book < Item
 
   def to_h
     {
-      # title: @title,
+      title: @title,
       name: @name,
       publisher: @publisher,
       publish_date: @publish_date,
-      cover_state: @cover_state
-      # label_color: @label_color
+      cover_state: @cover_state,
+      label_color: @label_color
     }
   end
 end

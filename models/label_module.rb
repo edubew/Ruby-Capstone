@@ -2,21 +2,22 @@ require 'json'
 require_relative '../classes/label'
 
 module LabelMod
-    def initialize
-        @labels_file = 'data/labels.json'
-        @labels = JSON.parse(File.read(@labels_file)) || []
-    end
+  def initialize
+    @labels_file = 'data/labels.json'
+    @labels = JSON.parse(File.read(@labels_file)) || []
+  end
 
-    def add_label
-        puts 'Enter Title:'
-        title = gets.chomp
-        puts 'Enter Color:'
-        color = gets.chomp
-        label = Label.new(id, title, color)
-        @labels << label.to_h
-
-        File.write(@labels_file, JSON.generate(@labels))
-        @labels = JSON.parse(File.read(@labels_file))
-        puts 'Successfully added label !!!'
-    end
+  def add_label(item)
+    puts 'Enter Title:'
+    title = gets.chomp
+    puts 'Enter Color:'
+    color = gets.chomp
+    label = Label.new(title, color)
+    label.add_item(item)
+    @labels << label.to_h
+    
+    File.write(@labels_file, JSON.generate(@labels))
+    @labels = JSON.parse(File.read(@labels_file))
+    puts 'Successfully added label !!!'
+  end
 end
