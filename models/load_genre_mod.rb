@@ -3,9 +3,9 @@ module LoadGenre
   def load_genre
     genres = []
 
-    return genres unless File.exist?('./data/author.json')
+    return genres unless File.exist?('./data/genre.json')
 
-    file = File.open('./data/author.json')
+    file = File.open('./data/genre.json')
     data = JSON.parse(file.read)
     data.each do |genre|
       genres << Genre.new(genre['name'])
