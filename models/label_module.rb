@@ -14,5 +14,9 @@ module LabelMod
         color = gets.chomp
         label = Label.new(id, title, color)
         @labels << label.to_h
+
+        File.write(@labels_file, JSON.generate(@labels))
+        @labels = JSON.parse(File.read(@labels_file))
+        puts 'Successfully added label !!!'
     end
 end
