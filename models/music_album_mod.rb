@@ -4,11 +4,11 @@ module MusicAlbumMod
   def add_music_album
     print 'Is it on spotify? [Y/N]: '
     on_spotify = gets.chomp.downcase
-    puts 'Enter publish data (yyyy-MM-dd): '
-    publish_data = gets.chomp
-    on_spotify = true if on_spotify == 'y'
+    puts 'Enter publish date (yyyy-MM-dd): '
+    publish_date = gets.chomp
+    on_spotify = on_spotify == 'y'
 
-    music_album = MusicAlbum.new(on_spotify, publish_data)
+    music_album = MusicAlbum.new(on_spotify, publish_date)
     music_album.move_to_archive?
     @music_albums << music_album
 
@@ -17,6 +17,14 @@ module MusicAlbumMod
   end
 
   def display_music_album
-    puts 'display musical album'
+    @music_albums.each do |music_album|
+      if music_album.on_spotify == true
+        is_on_spotify = 'Yes'
+      else
+        is_on_spotify = 'No'
+      end
+      print "on spotify: #{is_on_spotify}, "
+      print " Plublished On: #{music_album.publish_date}\n"
+    end
   end
 end
