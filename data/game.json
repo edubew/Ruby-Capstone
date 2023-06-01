@@ -3,5 +3,15 @@
     "multiplayer": true,
     "last_played_at": "2023-01-01",
     "publish_date": "2000-01-01"
+  },
+  {
+    "multiplayer": true,
+    "last_played_at": "2000-01-01",
+    "publish_date": "1999-01-01"
+  },
+  {
+    "multiplayer": true,
+    "last_played_at": "2000-03-07",
+    "publish_date": "2012-09-03"
   }
 ]

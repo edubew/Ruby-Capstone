@@ -6,17 +6,16 @@ class Main
     puts 'Welcome to Catalog of my things !!!'
     puts 'Kindly choose an option to interact with'
     puts '1.  Display all books'
-    puts '2.  Display all musical albums'
+    puts '2.  Display all music albums'
     puts '3.  Display all genres'
     puts '4.  Display all games'
     puts '5.  Display all authors'
     puts '6.  Add books'
     puts '7.  Add label'
-    puts '8.  Add musical album'
+    puts '8.  Add music album'
     puts '9. Add genre'
-    puts '10. Add games'
+    puts '10. Add game'
     puts '11. Add author'
-    puts 'Enter zero(0) to exit'
   end
 
   def options(option)
@@ -25,7 +24,7 @@ class Main
     when '1'
       app.list_books
     when '2'
-      app.display_musical_album
+      app.display_music_album
     when '3'
       app.display_genre
     when '4'
@@ -37,7 +36,7 @@ class Main
     when '7'
       app.add_label
     when '8'
-      app.add_musical_album
+      app.add_music_album
     when '9'
       app.add_genre
     when '10'
