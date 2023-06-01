@@ -15,6 +15,7 @@ class Main
     puts '8. Add musical album'
     puts '9. Add games'
     puts '10. Exit'
+
   end
 
   def options(option)
@@ -25,7 +26,7 @@ class Main
     when '2'
       app.display_musical_album
     when '3'
-      app.display_games
+      app.display_genre
     when '4'
       app.display_genres
     when '5'
@@ -50,7 +51,6 @@ class Main
       option = gets.chomp
 
       options(option)
-
       break if option == '10'
     end
   end
