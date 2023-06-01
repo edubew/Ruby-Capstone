@@ -3,7 +3,7 @@ require_relative 'item'
 # Label class that is asscoiated with a item
 class Label
   attr_accessor :title, :color, :items
-  attr_reader :id 
+  attr_reader :id
 
   def initialize(title, color)
     @id = Random.rand(1..1_000_000)
@@ -15,6 +15,7 @@ class Label
   # Method to add an item to a label and associate the label with that item.
   def add_item(item)
     return if @items.include?(item)
+
     @items << item
     item.label = self
     item.title = @title
@@ -29,5 +30,3 @@ class Label
     }
   end
 end
-
-

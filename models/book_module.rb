@@ -3,7 +3,7 @@ require_relative '../classes/book'
 require_relative '../models/label_module'
 
 module BookMod
-include LabelMod
+  include LabelMod
 
   def initialize
     @book_file = 'data/books.json'
@@ -13,7 +13,7 @@ include LabelMod
   def add_book
     puts 'Enter Publisher:'
     publisher = gets.chomp
-    
+
     puts 'Enter Cover State:'
     cover_state = gets.chomp
     puts 'Enter Publish Date:'
@@ -22,7 +22,7 @@ include LabelMod
     name = gets.chomp
     book = Book.new(publisher, cover_state, publish_date, name)
     add_label(book)
-    
+
     @books << book.to_h
 
     File.write(@book_file, JSON.generate(@books))

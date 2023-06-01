@@ -8,10 +8,13 @@ class Main
     puts '1. Display all books'
     puts '2. Display all musical album'
     puts '3. Display all games'
-    puts '4. Add books'
-    puts '6. Add musical album'
-    puts '7. Add games'
-    puts '8. Exit'
+    puts '4. Display all Genres'
+    puts '5. Display all labels'
+    puts '6. Display all authors'
+    puts '7. Add books'
+    puts '8. Add musical album'
+    puts '9. Add games'
+    puts '10. Exit'
   end
 
   def options(option)
@@ -24,11 +27,19 @@ class Main
     when '3'
       app.display_games
     when '4'
-      app.add_book
+      app.display_genres
     when '5'
-      app.add_musical_album
+      app.display_labels
     when '6'
-      app.add_game
+      app.display_authors
+    when '7'
+      app.add_book
+    when '8'
+      app.musical_album
+    when '9'
+      app.add_games
+    when '10'
+      puts 'Thanks for using our application!'
     end
   end
 
@@ -40,7 +51,7 @@ class Main
 
       options(option)
 
-      break if option == '7'
+      break if option == '10'
     end
   end
 end

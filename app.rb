@@ -19,10 +19,10 @@ class App
              end
     @labels_file = 'data/labels.json'
     @labels = if File.exist?(@labels_file)
-      file_contents = File.read(@labels_file)
-      file_contents.empty? ? [] : JSON.parse(file_contents)
-    else
-      []
-    end
+                file_contents = File.read(@labels_file)
+                file_contents.empty? ? [] : JSON.parse(file_contents)
+              else
+                []
+              end
   end
 end
