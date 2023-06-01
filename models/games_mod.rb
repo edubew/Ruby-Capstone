@@ -9,9 +9,9 @@ module GamesMod
   def add_game
     puts 'Is it multiplayer game [y/n] '
     multiplayer = gets.chomp == 'y'
-    puts 'Enter date of last played: '
+    puts 'Enter date of last played (yyyy-MM-dd): '
     last_played_at = gets.chomp
-    puts 'Enter publish data: '
+    puts 'Enter publish data (yyyy-MM-dd): '
     publish_data = gets.chomp
     game = Game.new(multiplayer, Date.parse(last_played_at), Date.parse(publish_data))
     @games << game

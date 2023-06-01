@@ -14,9 +14,8 @@ class Main
     puts '7.  Add label'
     puts '8.  Add music album'
     puts '9. Add genre'
-    puts '10. Add games'
+    puts '10. Add game'
     puts '11. Add author'
-    puts 'Enter zero(0) to exit'
   end
 
   def options(option)
