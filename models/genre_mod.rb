@@ -9,7 +9,7 @@ module GenreMod
 
   def display_genres
     @genres.each do |genre|
-      puts "Name: #{genre.name}"
+      print "Name: #{genre.name}, "
     end
   end
 end
