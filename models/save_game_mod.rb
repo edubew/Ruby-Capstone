@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-# save game
+# module for saving game to json file.
 module SaveGame
   def save_game(games)
     game_arr = []

@@ -1,25 +1,34 @@
-# frozen_string_literal: true
-
-require_relative 'models/book_mod'
+require_relative 'models/book_module'
 require_relative 'models/music_album_mod'
 require_relative 'models/games_mod'
+require_relative 'models/author_mod'
 
-require_relative 'classes/load_data'
-require_relative 'classes/save_data'
+require_relative 'classes/book'
 require_relative 'classes/game'
+require_relative 'classes/author'
+require_relative 'classes/save_data'
+require_relative 'classes/load_data'
 require_relative 'classes/music_album'
 
 # This class execute the main logic
 class App
   attr_accessor :books, :music_albums, :games
 
-  def initialize
-    @books = []
-    @music_albums = LoadData.new.load_music_album || []
-    @games = []
-  end
-
-  include GamesMod
   include BookMod
+  include GamesMod
+  include AuthorMod
   include MusicAlbumMod
+
+  def initialize
+    @music_albums = LoadData.new.load_music_album
+    @games = LoadData.new.load_game
+    @authors = LoadData.new.load_author
+    @book_file = 'data/books.json'
+    @books = if File.exist?(@book_file)
+               file_contents = File.read(@book_file)
+               file_contents.empty? ? [] : JSON.parse(file_contents)
+             else
+               []
+             end
+  end
 end

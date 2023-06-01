@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require_relative 'item'
 require 'date'
 
@@ -16,8 +14,7 @@ class Game < Item
   private
 
   def can_be_archived?
-    publish_datetime = DateTime.parse(@publish_date)
-    ((Date.today - publish_datetime).to_i / 365) > 10
+    super && @last_played_at < 2.years.ago
   end
 end
 

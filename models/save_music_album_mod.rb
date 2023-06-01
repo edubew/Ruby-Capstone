@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # save music album module implemented in save data
 module SaveMusicAlbum
   def save_music_album(music_albums)

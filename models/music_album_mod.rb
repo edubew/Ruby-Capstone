@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # module MusicAlbum implemeted in app class
 module MusicAlbumMod
   def add_music_album
