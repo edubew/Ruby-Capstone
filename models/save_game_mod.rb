@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# save game
 module SaveGame
   def save_game(games)
     game_arr = []

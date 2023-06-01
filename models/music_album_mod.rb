@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# module MusicAlbum implemeted in app class
 module MusicAlbumMod
   def add_music_album
     print 'Is it on spotify? [Y/N]: '
@@ -18,11 +19,11 @@ module MusicAlbumMod
 
   def display_music_album
     @music_albums.each do |music_album|
-      if music_album.on_spotify == true
-        is_on_spotify = 'Yes'
-      else
-        is_on_spotify = 'No'
-      end
+      is_on_spotify = if music_album.on_spotify == true
+                        'Yes'
+                      else
+                        'No'
+                      end
       print "on spotify: #{is_on_spotify}, "
       print " Plublished On: #{music_album.publish_date}\n"
     end

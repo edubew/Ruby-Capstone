@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# retrive music album data from music_album.json file
 module LoadMusicAlbum
   def load_music_album
     music_albums = []

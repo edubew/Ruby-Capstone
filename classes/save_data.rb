@@ -6,6 +6,7 @@ require 'fileutils'
 require_relative '../models/save_game_mod'
 require_relative '../models/save_music_album_mod'
 
+# save data into a respective .json file
 class SaveData
   def file_exist(filename)
     FileUtils.mkdir_p('./data')

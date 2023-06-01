@@ -4,7 +4,6 @@ require_relative 'models/book_mod'
 require_relative 'models/music_album_mod'
 require_relative 'models/games_mod'
 
-
 require_relative 'classes/load_data'
 require_relative 'classes/save_data'
 require_relative 'classes/game'
