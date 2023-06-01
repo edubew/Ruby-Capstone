@@ -27,7 +27,7 @@ class Main
     when '2'
       app.display_music_album
     when '3'
-      app.display_genre
+      app.display_genres
     when '4'
       app.display_games
     when '5'
