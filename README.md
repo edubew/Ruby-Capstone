@@ -32,6 +32,7 @@ This is a ruby program executed in `CLI` that allows users the options to add `b
 ## 🛠 Built With <a name="built-with"></a>
 
 - **Ruby**
+- **Postgres**
 
 ### Key Features <a name="key-features"></a>
 
