@@ -1,9 +1,9 @@
 require_relative 'app'
 
 # Represents the basic input to the functions
-
 class Main
   def select_options
+    puts ''
     puts 'Welcome to Catalog of my things !!!'
     puts 'Kindly choose an option to interact with'
     puts '1.  Display all books'
@@ -21,6 +21,7 @@ class Main
     puts 'Enter zero(0) to exit'
   end
 
+  # rubocop:disable Metrics/CyclomaticComplexity
   def options(option)
     app = App.new
     case option
@@ -50,6 +51,7 @@ class Main
       app.add_author
     end
   end
+  # rubocop:enable Metrics/CyclomaticComplexity
 
   def execute_app
     loop do

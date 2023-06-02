@@ -39,13 +39,13 @@ module BookMod
     end
   end
 
-  def list_labels 
+  def list_labels
     if @labels.empty?
       puts 'There are no labels.'
-      return 
+      return
     end
-    @labels.each do |label| 
+    @labels.each do |label|
       puts "Title: #{label['title']}, color: #{label['color']}"
     end
-  end 
+  end
 end
