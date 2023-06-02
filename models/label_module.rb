@@ -7,13 +7,12 @@ module LabelMod
     @labels = JSON.parse(File.read(@labels_file)) || []
   end
 
-  def add_label(item)
+  def add_label
     puts 'Enter Title:'
     title = gets.chomp
     puts 'Enter Color:'
     color = gets.chomp
     label = Label.new(title, color)
-    label.add_item(item)
     @labels << label.to_h
 
     File.write(@labels_file, JSON.generate(@labels))

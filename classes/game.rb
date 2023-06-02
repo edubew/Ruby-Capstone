@@ -17,5 +17,3 @@ class Game < Item
     super && @last_played_at < 2.years.ago
   end
 end
-
-# game = Game.new('shafiu', Date.parse('2020-12-12'), Date.parse('2020-12-12'))

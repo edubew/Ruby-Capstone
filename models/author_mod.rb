@@ -6,9 +6,9 @@ module AuthorMod
   end
 
   def add_author
-    puts 'Enter authos first name: '
+    print 'Enter author first name: '
     first_name = gets.chomp
-    puts 'Ebter authors second name: '
+    print 'Enter authors second name: '
     second_name = gets.chomp
     author = Author.new(first_name, second_name)
     @authors.push(author)

@@ -23,10 +23,6 @@ class Item
 
   private
 
-  # def can_be_archived?
-  #   ((Date.today - Date.parse(@publish_date)).to_i / 365) > 10
-  # end
-
   def can_be_archived?
     @publish_date = Date.parse(@publish_date) unless @publish_date.is_a?(Date)
     today = Date.today

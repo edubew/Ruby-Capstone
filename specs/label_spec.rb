@@ -27,11 +27,13 @@ describe Label do
   describe '#add_item' do
     it 'adds the item to the items array' do
       label.add_item(item)
+
       expect(label.items).to include(item)
     end
 
     it 'associates the label with the added item' do
       label.add_item(item)
+
       expect(item.label).to eq(label)
     end
   end
