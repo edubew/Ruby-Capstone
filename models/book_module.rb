@@ -21,7 +21,6 @@ module BookMod
     puts 'Enter Name:'
     name = gets.chomp
     book = Book.new(publisher, cover_state, publish_date, name)
-    add_label(book)
 
     @books << book.to_h
 
@@ -39,4 +38,14 @@ module BookMod
       puts "Name: #{book['name']}, Publisher: #{book['publisher']}, Publish date: #{book['publish_date']}, Cover state: #{book['cover_state']}"
     end
   end
+
+  def list_labels 
+    if @labels.empty?
+      puts 'There are no labels.'
+      return 
+    end
+    @labels.each do |label| 
+      puts "Title: #{label['title']}, color: #{label['color']}"
+    end
+  end 
 end
