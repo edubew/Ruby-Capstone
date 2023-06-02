@@ -2,8 +2,8 @@ require 'date'
 
 # Item class and defines the attributes of an item
 class Item
-  attr_accessor :publish_date, :label, :genre, :archived
-  attr_reader :author
+  attr_accessor :publish_date, :archived
+  attr_reader :author, :label, :genre
 
   def initialize(publish_date)
     Random.rand(1..1_000_000)
@@ -19,6 +19,16 @@ class Item
   def author=(author)
     @author = author
     author.items.push(self) unless author.items.include?(self)
+  end
+
+  def genre=(genre)
+    @genre = genre
+    genre.items.push(self) unless genre.items.include?(self)
+  end
+
+  def label=(label)
+    @label = label
+    label.items.push(self) unless label.items.include?(self)
   end
 
   private
