@@ -135,7 +135,7 @@ Give a ⭐ if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- Thanks to the Microverse team for the great curriculum.
+- Thanks to the Microverse team for the great curriculum and to this team members for their dedication.
 
 ## 📝 License <a name="license"></a>
 
